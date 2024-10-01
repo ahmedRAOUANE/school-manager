@@ -4,12 +4,12 @@ input[type="button"],
 input[type="submit"] {
     border-radius: 8px;
     border: 1px solid transparent;
-    padding: var(--button-padding);
+    padding: var(--button-secondary-padding);
     font-size: 1em;
     font-weight: 500;
     font-family: inherit;
-    background-color: #5d5d5d;
-    color: var(--white-color);
+    background-color: #e6f0ff;
+    color: var(--primary-color);
     cursor: pointer;
     transition: border-color 0.25s;
     position: relative;
@@ -21,7 +21,7 @@ input[type="submit"] {
     }
 
     &.primary {
-        background-color: #414141;
+        background-color: var(--primary-color);
     }
 
     &.link {
@@ -36,7 +36,7 @@ input[type="submit"] {
     }
 
     &:hover {
-        background-color: #505050;
+        background-color: #bbd2f5;
     }
 
     &.delete {
@@ -58,8 +58,24 @@ input[type="submit"] {
     }
 
     &.active {
-        background-color: var(--main-color);
+        background-color: #bbd2f5;
         color: #000000;
+    }
+
+    &.icon {
+        background-color: transparent;
+        padding: 0;
+        margin: 0;
+        overflow: hidden;
+        color: var(--primary-color);
+
+        &:hover {
+            background-color: transparent;
+
+            svg {
+                fill: var(--secondary-color);
+            }
+        }
     }
 }
 
@@ -84,11 +100,4 @@ input[type="submit"] {
             flex: 1;
         }
     }
-}
-
-.icon {
-    background-color: transparent;
-    padding: 0;
-    margin: 0;
-    overflow: hidden;
 }

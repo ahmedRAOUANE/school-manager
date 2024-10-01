@@ -1,12 +1,12 @@
-/* @tailwind base; */
-/* @tailwind components; */
-/* @tailwind utilities; */
-
 :root {
 
   /* padding */
-  --main-padding: 20px;
-  --button-padding: 0.6em 1.2em;
+  --main-padding: 1.25rem;
+  /* Flexible padding, relative to root font size */
+  --button-main-padding: 0.4em 1em;
+  /* Slightly larger for the main button */
+  --button-secondary-padding: 0.2em .7em;
+  /* Balanced padding for secondary button */
 
   /* font */
   font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
@@ -14,12 +14,19 @@
   font-weight: 400;
 
   /* color */
-  --main-color: #bababa;
-    --white-color: white;
-  --link-color: #4493f8;
-  color-scheme: light dark;
-  color: black;
-    background-color: var(--main-color);
+  --main-color: #f5f9ff;
+    /* Light gray background */
+    --white-color: #ffffff;
+    --link-color: #4a90e2;
+    /* Soft blue for links */
+    --accent-color: #ffc8b4;
+    /* Coral accent for buttons */
+    --primary-color: #333333;
+    /* Dark gray text */
+    --secondary-color: #767676;
+    /* Lighter gray text */
+    --highlight-color: #ffe600;
+    /* Yellow for highlights */
 
   /* text */
   font-synthesis: none;
@@ -41,15 +48,22 @@
 
 body {
   height: 100vh;
+  background-color: var(--main-color);
 }
 
 * {
   padding: 0;
   margin: 0;
   box-sizing: border-box;
-  text-decoration: none;
-  list-style: none;
   color: inherit;
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
 }
 
 h1,
@@ -113,4 +127,10 @@ select {
   &:focus {
     outline: none;
   }
+}
+
+svg {
+  --icon-wheight: 24px;
+  width: var(--icon-wheight);
+  height: var(--icon-wheight);
 }
